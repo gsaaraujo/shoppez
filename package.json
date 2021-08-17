@@ -17,6 +17,7 @@
     "react-native": "0.64.1",
     "react-native-safe-area-context": "^3.3.0",
     "react-native-screens": "^3.5.0",
+    "react-native-splash-screen": "^3.2.0",
     "styled-components": "^5.3.0"
   },
   "devDependencies": {
