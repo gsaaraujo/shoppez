@@ -1,22 +1,24 @@
-export const colors = {
-  background: '#FFFFFF',
+export const theme = {
+  colors: {
+    background: '#FFFFFF',
 
-  titleColor: '#3F3F3F',
-  subtitleColor: '#828282',
+    titleColor: '#3F3F3F',
+    subtitleColor: '#828282',
 
-  border: '#AEAEAE',
+    border: '#AEAEAE',
 
-  primaryDark: '#6666FF',
-  primaryLight: '#E6E6FF',
-  primaryBlank: '#FFFFFF',
+    primaryDark: '#6666FF',
+    primaryLight: '#E6E6FF',
+    primaryBlank: '#FFFFFF',
 
-  warning: '#FF5858',
+    warning: '#FF5858',
 
-  available: '#219653',
-};
+    available: '#219653',
+  },
 
-export const fonts = {
-  titleFont100: 'Inter-Bold',
-  titleFont50: 'Inter-Medium',
-  subtitleFont: 'Inter-Regular',
+  fonts: {
+    titleFont100: 'Inter-Bold',
+    titleFont50: 'Inter-Medium',
+    subtitleFont: 'Inter-Regular',
+  },
 };
