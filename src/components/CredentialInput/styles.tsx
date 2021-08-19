@@ -23,7 +23,7 @@ export const TextInput = styled.TextInput`
   font-family: ${theme.fonts.subtitleFont};
 `;
 
-export const Box = styled.View`
+export const TitleContent = styled.View`
   top: -10px;
   left: 22px;
   height: 15px;

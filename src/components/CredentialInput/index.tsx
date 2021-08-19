@@ -5,7 +5,7 @@ import { theme } from '../../global/theme/styles';
 import EyeOnSvg from '../../assets/images/eye-on.svg';
 import EyeOffSvg from '../../assets/images/eye-off.svg';
 
-import { Container, Box, Title, TextInput, Wrapper } from './styles';
+import { Container, TitleContent, Title, TextInput, Wrapper } from './styles';
 import { useEffect } from 'react';
 
 type Props = {
@@ -33,6 +33,10 @@ export const CredentialInput = ({
     handleIsWarning(isWarning);
   }, [isWarning]);
 
+  useEffect(() => {
+    setIsHighlight(border);
+  }, []);
+
   const handleIsEyeOff = () => setIsEyeOn(!isEyeOn);
   const handleIsSecureText = () => setIsSecureText(!isSecureText);
 
@@ -54,14 +58,14 @@ export const CredentialInput = ({
   };
 
   const handleIsWarning = (state: boolean) => {
-    state ? setIsHighlight(warning) : setIsHighlight(border);
+    state ? setIsHighlight(warning) : setIsHighlight(primaryDark);
   };
 
   return (
     <Container highLight={isHighlight}>
-      <Box>
+      <TitleContent>
         <Title highLight={isHighlight}>{title}</Title>
-      </Box>
+      </TitleContent>
 
       <TextInput
         maxLength={40}
