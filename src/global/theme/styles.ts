@@ -12,8 +12,10 @@ export const theme = {
     primaryBlank: '#FFFFFF',
 
     warning: '#FF5858',
-
     available: '#219653',
+
+    overlay: 'rgba(63, 63, 63, 0.5)',
+    touchFeedBack: 'rgba(63, 63, 63, 0.26)',
   },
 
   fonts: {
