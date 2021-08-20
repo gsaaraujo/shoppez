@@ -24,6 +24,7 @@ export const Button = ({
     <Container
       android_ripple={{ color: touchFeedBack }}
       backgroundColor={light ? primaryLight : primaryDark}
+      disabled={isLoading}
       onPress={handleOnPress}>
       {isLoading ? (
         <ActivityIndicator

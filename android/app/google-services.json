@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "105666275734",
+    "project_id": "shoppez-ac4c8",
+    "storage_bucket": "shoppez-ac4c8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:105666275734:android:b1fffaf6771a0981d855b7",
+        "android_client_info": {
+          "package_name": "com.shoppez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "105666275734-ks7enl7id3l46kq8dfujlrqtbmvbu90q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuaxaIUKcTEbDnr0iOE3NpKcEwsqj4wQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "105666275734-ks7enl7id3l46kq8dfujlrqtbmvbu90q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

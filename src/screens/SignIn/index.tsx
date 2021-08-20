@@ -3,6 +3,8 @@ import { Keyboard } from 'react-native';
 
 import { theme } from '../../global/theme/styles';
 
+import { useAuth } from '../../hooks/useAuth';
+
 import { Spacer } from '../../components/Spacer';
 import { Button } from '../../components/Button';
 import { WarningMessage } from '../../components/WarningMessage';
@@ -27,6 +29,8 @@ export const SignIn = () => {
   const { titleFont100, titleFont50 } = theme.fonts;
   const { titleColor, primaryDark, border, warning, touchFeedBack } =
     theme.colors;
+
+  const { isLoading, handleSocialAuthGoogle } = useAuth();
 
   const handleEmail = (email: string) => setEmail(email);
   const handlePassword = (password: string) => setPassword(password);
@@ -98,7 +102,12 @@ export const SignIn = () => {
 
         <Button title='Login' handleOnPress={handleOnSubmit} />
         <Spacer height={10} />
-        <Button title='Connect with Google' light handleOnPress={() => {}} />
+        <Button
+          title='Connect with Google'
+          light
+          isLoading={isLoading}
+          handleOnPress={handleSocialAuthGoogle}
+        />
         <Spacer height={10} />
         <Button title='Connect with Facebook' light handleOnPress={() => {}} />
       </FormInput>
