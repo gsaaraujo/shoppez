@@ -20,6 +20,10 @@ type Data = {
     email: string,
     password: string,
   ) => Promise<string | number>;
+  handlecreateUserWithEmailAndPassword: (
+    email: string,
+    password: string,
+  ) => Promise<string | number>;
 };
 
 export const AuthContext = createContext<Data>({} as Data);
@@ -57,7 +61,7 @@ export const AuthProvider = ({ children }: Props) => {
     } catch (error) {
       Alert.alert(
         'Sorry for the inconvenience',
-        'Failed to Login, please try again later',
+        'Failed to login, please try again later',
       );
     } finally {
       setIsLoading(false);
@@ -79,6 +83,33 @@ export const AuthProvider = ({ children }: Props) => {
     return 0;
   };
 
+  const handlecreateUserWithEmailAndPassword = async (
+    email: string,
+    password: string,
+  ): Promise<string | number> => {
+    try {
+      setIsLoading(true);
+      await auth().createUserWithEmailAndPassword(email, password);
+    } catch (error) {
+      if (error.code === 'auth/email-already-in-use') {
+        return 'Email address is already in use';
+      }
+
+      if (error.code === 'auth/invalid-email') {
+        return 'Email address is invalid';
+      }
+
+      if (error.code === 'auth/weak-password') {
+        return 'The password is not strong enough';
+      }
+
+      return 'Failed to sign up, please try again later';
+    } finally {
+      setIsLoading(false);
+    }
+    return 0;
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -86,6 +117,7 @@ export const AuthProvider = ({ children }: Props) => {
         isLoading,
         handleSocialAuthGoogle,
         handleEmailAndPasswordAuth,
+        handlecreateUserWithEmailAndPassword,
       }}>
       {children}
     </AuthContext.Provider>

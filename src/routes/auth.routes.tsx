@@ -4,6 +4,8 @@ import { StatusBar } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { SignIn } from '../screens/SignIn';
+import { SignUp } from '../screens/SignUp';
+
 import { theme } from '../global/theme/styles';
 
 export const AuthRoute = () => {
@@ -21,6 +23,7 @@ export const AuthRoute = () => {
           },
         }}>
         <Screen name='SignIn' component={SignIn} />
+        <Screen name='SignUp' component={SignUp} />
       </Navigator>
     </>
   );
