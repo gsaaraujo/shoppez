@@ -1,7 +1,5 @@
 import styled from 'styled-components/native';
 
-import { theme } from '../../global/theme/styles';
-
 type TitleProps = {
   font: string;
   color: string;
@@ -15,10 +13,6 @@ export const Container = styled.Pressable`
   justify-content: space-between;
 `;
 
-export const Header = styled.View`
-  width: 100%;
-`;
-
 export const Title = styled.Text<TitleProps>`
   color: ${props => props.color};
   font-size: ${props => props.size}px;
@@ -28,16 +22,6 @@ export const Title = styled.Text<TitleProps>`
 
 export const FormInput = styled.View`
   width: 100%;
-`;
-
-export const Footer = styled.Pressable`
-  width: 100%;
-`;
-
-export const Span = styled.Text`
-  font-size: 18px;
-  color: ${theme.colors.primaryDark};
-  font-family: ${theme.fonts.titleFont100};
 `;
 
 export const WarningMessageContent = styled.View`

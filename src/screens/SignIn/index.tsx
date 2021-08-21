@@ -11,15 +11,9 @@ import { Button } from '../../components/Button';
 import { WarningMessage } from '../../components/WarningMessage';
 import { CredentialInput } from '../../components/CredentialInput';
 
-import {
-  Container,
-  Header,
-  Title,
-  FormInput,
-  WarningMessageContent,
-  Footer,
-  Span,
-} from './styles';
+import { Container, Title, FormInput, WarningMessageContent } from './styles';
+import { GreetingsHeader } from '../../components/GreetingsHeader';
+import { NavigationFooter } from '../../components/NavigationFooter';
 
 export const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -62,16 +56,12 @@ export const SignIn = () => {
     setWarningMessages(errorMessage);
   };
 
+  const handleGoToSignUp = () => navigation.navigate('SignUp');
+
   return (
     <Container onPress={() => Keyboard.dismiss()}>
-      <Header>
-        <Title font={titleFont100} color={titleColor} size={24}>
-          Welcome,
-        </Title>
-        <Title font={titleFont50} color={titleColor} size={18}>
-          Sign in to continue
-        </Title>
-      </Header>
+      <GreetingsHeader title='Welcome,' subtitle='Sign in to continue' />
+
       <FormInput>
         <CredentialInput
           testID='CredentialInputName'
@@ -124,19 +114,13 @@ export const SignIn = () => {
         <Spacer height={10} />
       </FormInput>
 
-      <Footer
-        testID='Footer.Button'
-        hitSlop={25}
-        style={({ pressed }) => pressed && { opacity: 0.3 }}
-        onPress={() => navigation.navigate('SignUp')}>
-        <Title
-          font={titleFont50}
-          color={titleColor}
-          size={18}
-          alignSelf='center'>
-          I'm a new user.<Span> Sign Up</Span>
-        </Title>
-      </Footer>
+      <NavigationFooter
+        testID={'Footer.Button'}
+        title={`I'm a new user.`}
+        subtitle='Sign Up'
+        textAlign='center'
+        handleOnPress={handleGoToSignUp}
+      />
     </Container>
   );
 };
