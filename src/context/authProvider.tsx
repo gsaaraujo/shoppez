@@ -16,6 +16,10 @@ type Data = {
   user: User;
   isLoading: boolean;
   handleSocialAuthGoogle: () => void;
+  handleEmailAndPasswordAuth: (
+    email: string,
+    password: string,
+  ) => Promise<string | number>;
 };
 
 export const AuthContext = createContext<Data>({} as Data);
@@ -48,20 +52,41 @@ export const AuthProvider = ({ children }: Props) => {
       const { idToken } = await GoogleSignin.signIn();
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
-      await auth().signInWithCredential(googleCredential);
       setIsLoading(true);
+      await auth().signInWithCredential(googleCredential);
     } catch (error) {
       Alert.alert(
         'Sorry for the inconvenience',
         'Failed to Login, please try again later',
       );
-
+    } finally {
       setIsLoading(false);
     }
   };
 
+  const handleEmailAndPasswordAuth = async (
+    email: string,
+    password: string,
+  ): Promise<string | number> => {
+    try {
+      setIsLoading(true);
+      await auth().signInWithEmailAndPassword(email, password);
+    } catch (error) {
+      return 'Email or password invalid';
+    } finally {
+      setIsLoading(false);
+    }
+    return 0;
+  };
+
   return (
-    <AuthContext.Provider value={{ user, isLoading, handleSocialAuthGoogle }}>
+    <AuthContext.Provider
+      value={{
+        user,
+        isLoading,
+        handleSocialAuthGoogle,
+        handleEmailAndPasswordAuth,
+      }}>
       {children}
     </AuthContext.Provider>
   );

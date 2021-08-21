@@ -27,15 +27,15 @@ export const SignIn = () => {
   const [warningMessages, setWarningMessages] = useState<string[]>([]);
 
   const { titleFont100, titleFont50 } = theme.fonts;
-  const { titleColor, primaryDark, border, warning, touchFeedBack } =
-    theme.colors;
+  const { titleColor, primaryDark } = theme.colors;
 
-  const { isLoading, handleSocialAuthGoogle } = useAuth();
+  const { isLoading, handleSocialAuthGoogle, handleEmailAndPasswordAuth } =
+    useAuth();
 
   const handleEmail = (email: string) => setEmail(email);
   const handlePassword = (password: string) => setPassword(password);
 
-  const handleOnSubmit = () => {
+  const handleOnSubmit = async () => {
     let errorMessage: string[] = [];
     let whosIsEmpty: string[] = [];
 
@@ -49,6 +49,10 @@ export const SignIn = () => {
 
       isEmailEmpty === 0 && whosIsEmpty.push('email');
       isPasswordEmpty === 0 && whosIsEmpty.push('password');
+    } else {
+      const errorLogin = await handleEmailAndPasswordAuth(email, password);
+
+      errorLogin && errorMessage.push(errorLogin as string);
     }
 
     setEmptyFields(whosIsEmpty);
@@ -68,6 +72,7 @@ export const SignIn = () => {
 
       <FormInput>
         <CredentialInput
+          testID='CredentialInputName'
           title='Email'
           value={email}
           isWarning={emptyFields.includes('email')}
@@ -77,6 +82,7 @@ export const SignIn = () => {
         <Spacer height={25} />
 
         <CredentialInput
+          testID='CredentialInputPassword'
           title='Password'
           value={password}
           hasIcon
@@ -100,7 +106,12 @@ export const SignIn = () => {
 
         <Spacer height={35} />
 
-        <Button title='Login' handleOnPress={handleOnSubmit} />
+        <Button
+          testID='Button.Login'
+          title='Login'
+          isLoading={isLoading}
+          handleOnPress={handleOnSubmit}
+        />
         <Spacer height={10} />
         <Button
           title='Connect with Google'
@@ -109,7 +120,6 @@ export const SignIn = () => {
           handleOnPress={handleSocialAuthGoogle}
         />
         <Spacer height={10} />
-        <Button title='Connect with Facebook' light handleOnPress={() => {}} />
       </FormInput>
 
       <Footer hitSlop={25} style={({ pressed }) => pressed && { opacity: 0.3 }}>
