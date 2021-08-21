@@ -6,6 +6,7 @@ import { theme } from '../../global/theme/styles';
 import { Container, Title } from './styles';
 
 type Props = {
+  testID?: string;
   title: string;
   light?: boolean;
   isLoading?: boolean;
@@ -13,6 +14,7 @@ type Props = {
 };
 
 export const Button = ({
+  testID,
   title,
   light = false,
   isLoading = false,
@@ -22,6 +24,7 @@ export const Button = ({
 
   return (
     <Container
+      testID={testID}
       android_ripple={{ color: touchFeedBack }}
       backgroundColor={light ? primaryLight : primaryDark}
       disabled={isLoading}

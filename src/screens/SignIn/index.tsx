@@ -4,6 +4,7 @@ import { Keyboard } from 'react-native';
 import { theme } from '../../global/theme/styles';
 
 import { useAuth } from '../../hooks/useAuth';
+import { useNavigation } from '@react-navigation/native';
 
 import { Spacer } from '../../components/Spacer';
 import { Button } from '../../components/Button';
@@ -31,6 +32,8 @@ export const SignIn = () => {
 
   const { isLoading, handleSocialAuthGoogle, handleEmailAndPasswordAuth } =
     useAuth();
+
+  const navigation: any = useNavigation();
 
   const handleEmail = (email: string) => setEmail(email);
   const handlePassword = (password: string) => setPassword(password);
@@ -69,7 +72,6 @@ export const SignIn = () => {
           Sign in to continue
         </Title>
       </Header>
-
       <FormInput>
         <CredentialInput
           testID='CredentialInputName'
@@ -122,13 +124,17 @@ export const SignIn = () => {
         <Spacer height={10} />
       </FormInput>
 
-      <Footer hitSlop={25} style={({ pressed }) => pressed && { opacity: 0.3 }}>
+      <Footer
+        testID='Footer.Button'
+        hitSlop={25}
+        style={({ pressed }) => pressed && { opacity: 0.3 }}
+        onPress={() => navigation.navigate('SignUp')}>
         <Title
           font={titleFont50}
           color={titleColor}
           size={18}
           alignSelf='center'>
-          I'm a new user. <Span>Sign Up</Span>
+          I'm a new user.<Span> Sign Up</Span>
         </Title>
       </Footer>
     </Container>

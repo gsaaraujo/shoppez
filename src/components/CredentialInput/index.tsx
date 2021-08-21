@@ -9,6 +9,7 @@ import { Container, TitleContent, Title, TextInput, Wrapper } from './styles';
 import { useEffect } from 'react';
 
 type Props = {
+  testID?: string;
   title: string;
   value: string;
   isWarning?: boolean;
@@ -17,6 +18,7 @@ type Props = {
 };
 
 export const CredentialInput = ({
+  testID,
   title,
   value,
   isWarning = false,
@@ -62,14 +64,16 @@ export const CredentialInput = ({
   };
 
   return (
-    <Container highLight={isHighlight}>
+    <Container highLight={isHighlight} testID={testID}>
       <TitleContent>
         <Title highLight={isHighlight}>{title}</Title>
       </TitleContent>
 
       <TextInput
+        testID='TextInput'
         maxLength={40}
         secureTextEntry={isSecureText}
+        autoCapitalize='none'
         onChangeText={handleOnChangeText}
         onFocus={handleOnFocus}
         onBlur={handleOnBlur}
