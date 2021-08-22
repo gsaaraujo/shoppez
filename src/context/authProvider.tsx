@@ -9,6 +9,7 @@ type Props = {
 };
 
 type User = {
+  uid: string;
   photoURL: string | null;
 };
 

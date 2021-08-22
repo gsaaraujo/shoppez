@@ -2,7 +2,9 @@ import React from 'react';
 
 import { NavigationContainer } from '@react-navigation/native';
 
+import { AppRoute } from './app.routes';
 import { AuthRoute } from './auth.routes';
+
 import { useAuth } from '../hooks/useAuth';
 
 export const Routes = () => {
@@ -10,7 +12,7 @@ export const Routes = () => {
 
   return (
     <NavigationContainer>
-      <AuthRoute />
+      {user.uid ? <AppRoute /> : <AuthRoute />}
     </NavigationContainer>
   );
 };
