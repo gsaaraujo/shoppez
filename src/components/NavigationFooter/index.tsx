@@ -3,7 +3,6 @@ import React from 'react';
 import { Container, Title, Span } from './styles';
 
 type Props = {
-  testID: string;
   title: string;
   subtitle: string;
   textAlign?: string;
@@ -11,7 +10,6 @@ type Props = {
 };
 
 export const NavigationFooter = ({
-  testID,
   title,
   subtitle,
   textAlign,
@@ -19,7 +17,7 @@ export const NavigationFooter = ({
 }: Props) => {
   return (
     <Container
-      testID={testID}
+      testID={'NavigationFooter'}
       hitSlop={25}
       style={({ pressed }) => pressed && { opacity: 0.3 }}
       onPress={handleOnPress}>

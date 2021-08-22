@@ -5,14 +5,12 @@ import { Container, Content, Wrapper, Title } from './styles';
 
 type Props = {
   title: string;
-  handleOnTimeOut: () => void;
+  handleOnPress: () => void;
 };
 
-export const SuccessCenterCard = ({ title, handleOnTimeOut }: Props) => {
+export const SuccessCenterCard = ({ title, handleOnPress }: Props) => {
   useEffect(() => {
-    setTimeout(() => {
-      handleOnTimeOut();
-    }, 3000);
+    handleOnPress();
   }, []);
 
   return (

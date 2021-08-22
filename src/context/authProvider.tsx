@@ -20,7 +20,7 @@ type Data = {
     email: string,
     password: string,
   ) => Promise<string | number>;
-  handlecreateUserWithEmailAndPassword: (
+  handleCreateUserWithEmailAndPassword: (
     email: string,
     password: string,
   ) => Promise<string | number>;
@@ -83,7 +83,7 @@ export const AuthProvider = ({ children }: Props) => {
     return 0;
   };
 
-  const handlecreateUserWithEmailAndPassword = async (
+  const handleCreateUserWithEmailAndPassword = async (
     email: string,
     password: string,
   ): Promise<string | number> => {
@@ -117,7 +117,7 @@ export const AuthProvider = ({ children }: Props) => {
         isLoading,
         handleSocialAuthGoogle,
         handleEmailAndPasswordAuth,
-        handlecreateUserWithEmailAndPassword,
+        handleCreateUserWithEmailAndPassword,
       }}>
       {children}
     </AuthContext.Provider>

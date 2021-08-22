@@ -19,10 +19,10 @@ export const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [emptyFields, setEmptyFields] = useState<string[]>([]);
-  const [warningMessages, setWarningMessages] = useState<string[]>([]);
+  const [warningMessages, setWarningMessages] = useState('');
 
-  const { titleFont100, titleFont50 } = theme.fonts;
-  const { titleColor, primaryDark } = theme.colors;
+  const { titleFont100 } = theme.fonts;
+  const { primaryDark } = theme.colors;
 
   const { isLoading, handleSocialAuthGoogle, handleEmailAndPasswordAuth } =
     useAuth();
@@ -33,7 +33,7 @@ export const SignIn = () => {
   const handlePassword = (password: string) => setPassword(password);
 
   const handleOnSubmit = async () => {
-    let errorMessage: string[] = [];
+    let errorMessage = '';
     let whosIsEmpty: string[] = [];
 
     const isEmailEmpty = email.trim().length;
@@ -42,14 +42,14 @@ export const SignIn = () => {
     const isFieldsEmpty = !(isEmailEmpty && isPasswordEmpty);
 
     if (isFieldsEmpty) {
-      errorMessage.push('Please all fields are required');
+      errorMessage = 'Please all fields are required';
 
       isEmailEmpty === 0 && whosIsEmpty.push('email');
       isPasswordEmpty === 0 && whosIsEmpty.push('password');
     } else {
       const errorLogin = await handleEmailAndPasswordAuth(email, password);
 
-      errorLogin && errorMessage.push(errorLogin as string);
+      errorLogin && (errorMessage = errorLogin as string);
     }
 
     setEmptyFields(whosIsEmpty);
@@ -64,7 +64,6 @@ export const SignIn = () => {
 
       <FormInput>
         <CredentialInput
-          testID='CredentialInputName'
           title='Email'
           value={email}
           isWarning={emptyFields.includes('email')}
@@ -74,7 +73,6 @@ export const SignIn = () => {
         <Spacer height={25} />
 
         <CredentialInput
-          testID='CredentialInputPassword'
           title='Password'
           value={password}
           hasIcon
@@ -91,15 +89,12 @@ export const SignIn = () => {
         </Title>
 
         <WarningMessageContent>
-          {warningMessages.map((message, index) => (
-            <WarningMessage key={index} title={message} />
-          ))}
+          <WarningMessage title={warningMessages} />
         </WarningMessageContent>
 
         <Spacer height={35} />
 
         <Button
-          testID='Button.Login'
           title='Login'
           isLoading={isLoading}
           handleOnPress={handleOnSubmit}
@@ -115,7 +110,6 @@ export const SignIn = () => {
       </FormInput>
 
       <NavigationFooter
-        testID={'Footer.Button'}
         title={`I'm a new user.`}
         subtitle='Sign Up'
         textAlign='center'

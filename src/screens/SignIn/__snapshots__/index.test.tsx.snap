@@ -1,0 +1,3543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should change border color on focus and on blur 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 64,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 110,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      font="Inter-Bold"
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 24,
+          },
+        ]
+      }
+    >
+      Welcome,
+    </Text>
+    <Text
+      font="Inter-Medium"
+      size={18}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+          },
+        ]
+      }
+    >
+      Sign in to continue
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      height={25}
+      style={
+        Array [
+          Object {
+            "height": 25,
+            "width": 25,
+          },
+        ]
+      }
+    />
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "top": 25,
+          }
+        }
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingRight": 20,
+              "position": "absolute",
+              "right": 0,
+              "top": 13,
+            },
+          ]
+        }
+        testID="EyeIconButton"
+      >
+        <SvgMock />
+      </View>
+    </View>
+    <Text
+      alignSelf="flex-end"
+      color="#6666FF"
+      font="Inter-Bold"
+      size={12}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#6666FF",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Bold",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      height={35}
+      style={
+        Array [
+          Object {
+            "height": 35,
+            "width": 35,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#6666FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6666FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#E6E6FF"
+        style={
+          Array [
+            Object {
+              "color": "#E6E6FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#E6E6FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#E6E6FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#6666FF"
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Connect with Google
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 25,
+        "left": 25,
+        "right": 25,
+        "top": 25,
+      }
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        false,
+      ]
+    }
+    testID="NavigationFooter"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+        ]
+      }
+      textAlign="center"
+    >
+      I'm a new user.
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+         
+        Sign Up
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should change password visibility when hide/show eye icon is pressed 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 64,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 110,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      font="Inter-Bold"
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 24,
+          },
+        ]
+      }
+    >
+      Welcome,
+    </Text>
+    <Text
+      font="Inter-Medium"
+      size={18}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+          },
+        ]
+      }
+    >
+      Sign in to continue
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      height={25}
+      style={
+        Array [
+          Object {
+            "height": 25,
+            "width": 25,
+          },
+        ]
+      }
+    />
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "top": 25,
+          }
+        }
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingRight": 20,
+              "position": "absolute",
+              "right": 0,
+              "top": 13,
+            },
+          ]
+        }
+        testID="EyeIconButton"
+      >
+        <SvgMock />
+      </View>
+    </View>
+    <Text
+      alignSelf="flex-end"
+      color="#6666FF"
+      font="Inter-Bold"
+      size={12}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#6666FF",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Bold",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      height={35}
+      style={
+        Array [
+          Object {
+            "height": 35,
+            "width": 35,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#6666FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6666FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#E6E6FF"
+        style={
+          Array [
+            Object {
+              "color": "#E6E6FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#E6E6FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#E6E6FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#6666FF"
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Connect with Google
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 25,
+        "left": 25,
+        "right": 25,
+        "top": 25,
+      }
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        false,
+      ]
+    }
+    testID="NavigationFooter"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+        ]
+      }
+      textAlign="center"
+    >
+      I'm a new user.
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+         
+        Sign Up
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should go to Home screen when google button is pressed 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 64,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 110,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      font="Inter-Bold"
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 24,
+          },
+        ]
+      }
+    >
+      Welcome,
+    </Text>
+    <Text
+      font="Inter-Medium"
+      size={18}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+          },
+        ]
+      }
+    >
+      Sign in to continue
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      height={25}
+      style={
+        Array [
+          Object {
+            "height": 25,
+            "width": 25,
+          },
+        ]
+      }
+    />
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "top": 25,
+          }
+        }
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingRight": 20,
+              "position": "absolute",
+              "right": 0,
+              "top": 13,
+            },
+          ]
+        }
+        testID="EyeIconButton"
+      >
+        <SvgMock />
+      </View>
+    </View>
+    <Text
+      alignSelf="flex-end"
+      color="#6666FF"
+      font="Inter-Bold"
+      size={12}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#6666FF",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Bold",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      height={35}
+      style={
+        Array [
+          Object {
+            "height": 35,
+            "width": 35,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#6666FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6666FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#E6E6FF"
+        style={
+          Array [
+            Object {
+              "color": "#E6E6FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#E6E6FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#E6E6FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#6666FF"
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Connect with Google
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 25,
+        "left": 25,
+        "right": 25,
+        "top": 25,
+      }
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        false,
+      ]
+    }
+    testID="NavigationFooter"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+        ]
+      }
+      textAlign="center"
+    >
+      I'm a new user.
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+         
+        Sign Up
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should go to Home screen when login button is pressed 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 64,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 110,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      font="Inter-Bold"
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 24,
+          },
+        ]
+      }
+    >
+      Welcome,
+    </Text>
+    <Text
+      font="Inter-Medium"
+      size={18}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+          },
+        ]
+      }
+    >
+      Sign in to continue
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      height={25}
+      style={
+        Array [
+          Object {
+            "height": 25,
+            "width": 25,
+          },
+        ]
+      }
+    />
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "top": 25,
+          }
+        }
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingRight": 20,
+              "position": "absolute",
+              "right": 0,
+              "top": 13,
+            },
+          ]
+        }
+        testID="EyeIconButton"
+      >
+        <SvgMock />
+      </View>
+    </View>
+    <Text
+      alignSelf="flex-end"
+      color="#6666FF"
+      font="Inter-Bold"
+      size={12}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#6666FF",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Bold",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      height={35}
+      style={
+        Array [
+          Object {
+            "height": 35,
+            "width": 35,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#6666FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6666FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#E6E6FF"
+        style={
+          Array [
+            Object {
+              "color": "#E6E6FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#E6E6FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#E6E6FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#6666FF"
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Connect with Google
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 25,
+        "left": 25,
+        "right": 25,
+        "top": 25,
+      }
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        false,
+      ]
+    }
+    testID="NavigationFooter"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+        ]
+      }
+      textAlign="center"
+    >
+      I'm a new user.
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+         
+        Sign Up
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should go to SignUp screen when (im a new user) button is pressed 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 64,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 110,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      font="Inter-Bold"
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 24,
+          },
+        ]
+      }
+    >
+      Welcome,
+    </Text>
+    <Text
+      font="Inter-Medium"
+      size={18}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+          },
+        ]
+      }
+    >
+      Sign in to continue
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      height={25}
+      style={
+        Array [
+          Object {
+            "height": 25,
+            "width": 25,
+          },
+        ]
+      }
+    />
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "top": 25,
+          }
+        }
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingRight": 20,
+              "position": "absolute",
+              "right": 0,
+              "top": 13,
+            },
+          ]
+        }
+        testID="EyeIconButton"
+      >
+        <SvgMock />
+      </View>
+    </View>
+    <Text
+      alignSelf="flex-end"
+      color="#6666FF"
+      font="Inter-Bold"
+      size={12}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#6666FF",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Bold",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          
+        </Text>
+      </View>
+    </View>
+    <View
+      height={35}
+      style={
+        Array [
+          Object {
+            "height": 35,
+            "width": 35,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#6666FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6666FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#E6E6FF"
+        style={
+          Array [
+            Object {
+              "color": "#E6E6FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#E6E6FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#E6E6FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#6666FF"
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Connect with Google
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 25,
+        "left": 25,
+        "right": 25,
+        "top": 25,
+      }
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        false,
+      ]
+    }
+    testID="NavigationFooter"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+        ]
+      }
+      textAlign="center"
+    >
+      I'm a new user.
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+         
+        Sign Up
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should show a warning message when email/password is invalid 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 64,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 110,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      font="Inter-Bold"
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 24,
+          },
+        ]
+      }
+    >
+      Welcome,
+    </Text>
+    <Text
+      font="Inter-Medium"
+      size={18}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+          },
+        ]
+      }
+    >
+      Sign in to continue
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      height={25}
+      style={
+        Array [
+          Object {
+            "height": 25,
+            "width": 25,
+          },
+        ]
+      }
+    />
+    <View
+      highLight="#AEAEAE"
+      style={
+        Array [
+          Object {
+            "borderColor": "#AEAEAE",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#AEAEAE"
+          style={
+            Array [
+              Object {
+                "color": "#AEAEAE",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "top": 25,
+          }
+        }
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingRight": 20,
+              "position": "absolute",
+              "right": 0,
+              "top": 13,
+            },
+          ]
+        }
+        testID="EyeIconButton"
+      >
+        <SvgMock />
+      </View>
+    </View>
+    <Text
+      alignSelf="flex-end"
+      color="#6666FF"
+      font="Inter-Bold"
+      size={12}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#6666FF",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Bold",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          Email or password invalid
+        </Text>
+      </View>
+    </View>
+    <View
+      height={35}
+      style={
+        Array [
+          Object {
+            "height": 35,
+            "width": 35,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#6666FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6666FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#E6E6FF"
+        style={
+          Array [
+            Object {
+              "color": "#E6E6FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#E6E6FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#E6E6FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#6666FF"
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Connect with Google
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 25,
+        "left": 25,
+        "right": 25,
+        "top": 25,
+      }
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        false,
+      ]
+    }
+    testID="NavigationFooter"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+        ]
+      }
+      textAlign="center"
+    >
+      I'm a new user.
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+         
+        Sign Up
+      </Text>
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`should show a warning message when login button is pressed with empty fields 1`] = `
+<View
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {
+        "flexBasis": 0,
+        "flexGrow": 1,
+        "flexShrink": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 64,
+        "paddingLeft": 40,
+        "paddingRight": 40,
+        "paddingTop": 110,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <Text
+      font="Inter-Bold"
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 24,
+          },
+        ]
+      }
+    >
+      Welcome,
+    </Text>
+    <Text
+      font="Inter-Medium"
+      size={18}
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+          },
+        ]
+      }
+    >
+      Sign in to continue
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <View
+      highLight="#FF5858"
+      style={
+        Array [
+          Object {
+            "borderColor": "#FF5858",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#FF5858"
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Email
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={false}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+    </View>
+    <View
+      height={25}
+      style={
+        Array [
+          Object {
+            "height": 25,
+            "width": 25,
+          },
+        ]
+      }
+    />
+    <View
+      highLight="#FF5858"
+      style={
+        Array [
+          Object {
+            "borderColor": "#FF5858",
+            "borderRadius": 10,
+            "borderStyle": "solid",
+            "borderWidth": 1.5,
+            "height": 45,
+            "width": "100%",
+          },
+        ]
+      }
+      testID="CredentialInput"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#ffffff",
+              "height": 15,
+              "left": 22,
+              "position": "absolute",
+              "top": -10,
+            },
+          ]
+        }
+      >
+        <Text
+          highLight="#FF5858"
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Medium",
+                "fontSize": 12,
+                "paddingLeft": 5,
+                "paddingRight": 5,
+              },
+            ]
+          }
+        >
+          Password
+        </Text>
+      </View>
+      <TextInput
+        allowFontScaling={true}
+        autoCapitalize="none"
+        maxLength={40}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        rejectResponderTermination={true}
+        secureTextEntry={true}
+        style={
+          Array [
+            Object {
+              "color": "#3F3F3F",
+              "fontFamily": "Inter-Regular",
+              "fontSize": 14,
+              "height": "100%",
+              "paddingLeft": 22,
+              "paddingRight": 22,
+              "width": "100%",
+            },
+          ]
+        }
+        testID="TextInput"
+        underlineColorAndroid="transparent"
+      />
+      <View
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        hitSlop={
+          Object {
+            "bottom": 25,
+            "left": 25,
+            "right": 25,
+            "top": 25,
+          }
+        }
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Array [
+            Object {
+              "paddingRight": 20,
+              "position": "absolute",
+              "right": 0,
+              "top": 13,
+            },
+          ]
+        }
+        testID="EyeIconButton"
+      >
+        <SvgMock />
+      </View>
+    </View>
+    <Text
+      alignSelf="flex-end"
+      color="#6666FF"
+      font="Inter-Bold"
+      size={12}
+      style={
+        Array [
+          Object {
+            "alignSelf": "flex-end",
+            "color": "#6666FF",
+            "fontFamily": "Inter-Bold",
+            "fontSize": 12,
+          },
+        ]
+      }
+    >
+      Forgot password?
+    </Text>
+    <View
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <Text
+          style={
+            Array [
+              Object {
+                "color": "#FF5858",
+                "fontFamily": "Inter-Bold",
+                "fontSize": 12,
+              },
+            ]
+          }
+        >
+          Please all fields are required
+        </Text>
+      </View>
+    </View>
+    <View
+      height={35}
+      style={
+        Array [
+          Object {
+            "height": 35,
+            "width": 35,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#6666FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#6666FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#E6E6FF"
+        style={
+          Array [
+            Object {
+              "color": "#E6E6FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={true}
+      backgroundColor="#E6E6FF"
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#E6E6FF",
+            "borderRadius": 10,
+            "height": 50,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        ]
+      }
+      testID="Button"
+    >
+      <Text
+        color="#6666FF"
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 16,
+            },
+          ]
+        }
+      >
+        Connect with Google
+      </Text>
+    </View>
+    <View
+      height={10}
+      style={
+        Array [
+          Object {
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    hitSlop={
+      Object {
+        "bottom": 25,
+        "left": 25,
+        "right": 25,
+        "top": 25,
+      }
+    }
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "width": "100%",
+        },
+        false,
+      ]
+    }
+    testID="NavigationFooter"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#3F3F3F",
+            "fontFamily": "Inter-Medium",
+            "fontSize": 18,
+            "textAlign": "center",
+          },
+        ]
+      }
+      textAlign="center"
+    >
+      I'm a new user.
+      <Text
+        style={
+          Array [
+            Object {
+              "color": "#6666FF",
+              "fontFamily": "Inter-Bold",
+              "fontSize": 18,
+            },
+          ]
+        }
+      >
+         
+        Sign Up
+      </Text>
+    </Text>
+  </View>
+</View>
+`;

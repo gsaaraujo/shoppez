@@ -9,7 +9,6 @@ import { Container, TitleContent, Title, TextInput, Wrapper } from './styles';
 import { useEffect } from 'react';
 
 type Props = {
-  testID?: string;
   title: string;
   value: string;
   isWarning?: boolean;
@@ -18,7 +17,6 @@ type Props = {
 };
 
 export const CredentialInput = ({
-  testID,
   title,
   value,
   isWarning = false,
@@ -64,7 +62,7 @@ export const CredentialInput = ({
   };
 
   return (
-    <Container highLight={isHighlight} testID={testID}>
+    <Container testID={'CredentialInput'} highLight={isHighlight}>
       <TitleContent>
         <Title highLight={isHighlight}>{title}</Title>
       </TitleContent>
@@ -81,6 +79,7 @@ export const CredentialInput = ({
 
       {hasIcon && (
         <Wrapper
+          testID='EyeIconButton'
           onPress={() => {
             handleIsEyeOff(), handleIsSecureText();
           }}
