@@ -1,6 +1,6 @@
 import React, { useState, useEffect, createContext, ReactNode } from 'react';
 
-import auth from '@react-native-firebase/auth';
+import auth, { FirebaseAuthTypes } from '@react-native-firebase/auth';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import { Alert } from 'react-native';
 
@@ -8,13 +8,8 @@ type Props = {
   children: ReactNode;
 };
 
-type User = {
-  uid: string;
-  photoURL: string | null;
-};
-
 type Data = {
-  user: User;
+  user: FirebaseAuthTypes.User | null;
   isLoading: boolean;
   handleSocialAuthGoogle: () => void;
   handleEmailAndPasswordAuth: (
@@ -25,29 +20,28 @@ type Data = {
     email: string,
     password: string,
   ) => Promise<string | number>;
+  handleLogOut: () => void;
 };
 
 export const AuthContext = createContext<Data>({} as Data);
 
 export const AuthProvider = ({ children }: Props) => {
-  const [user, setUser] = useState<User>({} as User);
+  const [user, setUser] = useState<FirebaseAuthTypes.User | null>(null);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    handleOnAuthStateChange();
-  }, [isLoading]);
-
-  const handleOnAuthStateChange = () => {
-    const unsubscribe = auth().onAuthStateChanged(user => {
-      if (user) {
-        setUser(user);
-      }
-    });
-
-    return unsubscribe();
+  const handleOnAuthStateChange = (user: FirebaseAuthTypes.User | null) => {
+    setUser(user);
+    setIsLoading(false);
   };
 
+  useEffect(() => {
+    const subscriber = auth().onAuthStateChanged(handleOnAuthStateChange);
+    return subscriber;
+  }, []);
+
   const handleSocialAuthGoogle = async () => {
+    setIsLoading(true);
+
     GoogleSignin.configure({
       webClientId:
         '105666275734-ks7enl7id3l46kq8dfujlrqtbmvbu90q.apps.googleusercontent.com',
@@ -57,7 +51,6 @@ export const AuthProvider = ({ children }: Props) => {
       const { idToken } = await GoogleSignin.signIn();
       const googleCredential = auth.GoogleAuthProvider.credential(idToken);
 
-      setIsLoading(true);
       await auth().signInWithCredential(googleCredential);
     } catch (error) {
       Alert.alert(
@@ -73,8 +66,9 @@ export const AuthProvider = ({ children }: Props) => {
     email: string,
     password: string,
   ): Promise<string | number> => {
+    setIsLoading(true);
+
     try {
-      setIsLoading(true);
       await auth().signInWithEmailAndPassword(email, password);
     } catch (error) {
       return 'Email or password invalid';
@@ -88,8 +82,9 @@ export const AuthProvider = ({ children }: Props) => {
     email: string,
     password: string,
   ): Promise<string | number> => {
+    setIsLoading(true);
+
     try {
-      setIsLoading(true);
       await auth().createUserWithEmailAndPassword(email, password);
     } catch (error) {
       if (error.code === 'auth/email-already-in-use') {
@@ -111,6 +106,21 @@ export const AuthProvider = ({ children }: Props) => {
     return 0;
   };
 
+  const handleLogOut = async () => {
+    setIsLoading(true);
+
+    try {
+      await auth().signOut();
+    } catch (error) {
+      Alert.alert(
+        'Sorry for the inconvenience',
+        'Failed to login, please try again later',
+      );
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -119,6 +129,7 @@ export const AuthProvider = ({ children }: Props) => {
         handleSocialAuthGoogle,
         handleEmailAndPasswordAuth,
         handleCreateUserWithEmailAndPassword,
+        handleLogOut,
       }}>
       {children}
     </AuthContext.Provider>

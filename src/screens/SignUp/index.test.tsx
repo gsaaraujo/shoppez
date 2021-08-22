@@ -165,34 +165,3 @@ describe('should show a warning message when one of the situations bellow occour
     expect(toJSON()).toMatchSnapshot();
   });
 });
-
-it('should show a modal when account has been created successfully', async () => {
-  const { result } = renderHook(() => useAuth());
-  const fakeEmail = 'example@test.com';
-  const fakePassword = 'test123';
-
-  act(() => {
-    result.current.handleCreateUserWithEmailAndPassword = jest.fn(() =>
-      Promise.resolve(0),
-    );
-  });
-
-  const { getByTestId, getAllByTestId, toJSON } = render(<SignUp />);
-
-  const createAccountButton = getByTestId('Button');
-  const inputFields = getAllByTestId('TextInput');
-
-  fireEvent.changeText(inputFields[0], fakeEmail);
-  fireEvent.changeText(inputFields[1], fakePassword);
-
-  await act(async () => {
-    fireEvent.press(createAccountButton);
-  });
-
-  const modal = getByTestId('ModalView');
-
-  expect(modal).toBeTruthy();
-  expect(modal.props.visible).toBeTruthy();
-
-  expect(toJSON()).toMatchSnapshot();
-});

@@ -6,12 +6,10 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Spacer } from '../../components/Spacer';
 import { Button } from '../../components/Button';
-import { ModalView } from '../../components/ModalView';
 import { WarningMessage } from '../../components/WarningMessage';
 import { CredentialInput } from '../../components/CredentialInput';
 import { GreetingsHeader } from '../../components/GreetingsHeader';
 import { NavigationFooter } from '../../components/NavigationFooter';
-import { SuccessCenterCard } from '../../components/SuccessCenterCard';
 
 import { Container, FormInput, WarningMessageContent } from './styles';
 
@@ -20,7 +18,6 @@ export const SignUp = () => {
   const [password, setPassword] = useState('');
   const [emptyFields, setEmptyFields] = useState<string[]>([]);
   const [warningMessages, setWarningMessages] = useState('');
-  const [modalVisibility, setModalVisibility] = useState(false);
 
   const { isLoading, handleCreateUserWithEmailAndPassword } = useAuth();
 
@@ -46,9 +43,7 @@ export const SignUp = () => {
     } else {
       const error = await handleCreateUserWithEmailAndPassword(email, password);
 
-      error
-        ? (errorMessage = error as string)
-        : setModalVisibility(!modalVisibility);
+      error && (errorMessage = error as string);
     }
 
     setEmptyFields(whosIsEmpty);
@@ -56,13 +51,6 @@ export const SignUp = () => {
   };
 
   const handleGoToSignIn = () => navigation.navigate('SignIn');
-
-  const handleGoToSignInModal = () => {
-    setTimeout(() => {
-      setModalVisibility(!modalVisibility);
-      navigation.navigate('SignIn');
-    }, 3000);
-  };
 
   return (
     <Container onPress={() => Keyboard.dismiss()}>
@@ -110,13 +98,6 @@ export const SignUp = () => {
         textAlign='center'
         handleOnPress={handleGoToSignIn}
       />
-
-      <ModalView isVisible={modalVisibility} justifyContent='center'>
-        <SuccessCenterCard
-          title='Your account has been successfully created'
-          handleOnPress={handleGoToSignInModal}
-        />
-      </ModalView>
     </Container>
   );
 };
