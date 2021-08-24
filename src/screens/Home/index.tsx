@@ -36,7 +36,9 @@ import {
   LoadingFlatlist,
 } from './styles';
 
-type ProductsType = FirebaseFirestoreTypes.DocumentData;
+import { useNavigation } from '@react-navigation/native';
+
+export type ProductsType = FirebaseFirestoreTypes.DocumentData;
 
 export const Home = () => {
   const [products, setProducts] = useState<ProductsType[]>([]);
@@ -50,6 +52,7 @@ export const Home = () => {
   const isCategorySelectedFirstRun = useRef(false);
 
   const { user } = useAuth();
+  const navigation: any = useNavigation();
 
   const { titleColor, primaryDark, subtitleColor } = theme.colors;
   const { titleFont100, subtitleFont } = theme.fonts;
@@ -177,6 +180,9 @@ export const Home = () => {
     setIsLoading(false);
   };
 
+  const handleGoToProductDetails = (productDetails: ProductsType) =>
+    navigation.navigate('ProductDetails', { productDetails: productDetails });
+
   return (
     <Container onPress={() => Keyboard.dismiss()}>
       <Spacer height={20} />
@@ -248,7 +254,12 @@ export const Home = () => {
         <FlatList
           data={productsFiltered}
           keyExtractor={item => item.key}
-          renderItem={({ item }) => <Product productInfo={item} />}
+          renderItem={({ item }) => (
+            <Product
+              productInfo={item}
+              handleOnPress={handleGoToProductDetails}
+            />
+          )}
           numColumns={2}
           showsVerticalScrollIndicator={false}
           columnWrapperStyle={{ justifyContent: 'space-around' }}
