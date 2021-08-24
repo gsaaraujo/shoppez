@@ -8,7 +8,7 @@ type TitleProps = {
   color: string;
 };
 
-export const Container = styled.View`
+export const Container = styled.Pressable`
   width: 45%;
   height: 272px;
   padding-left: 15px;
@@ -31,12 +31,10 @@ export const Span = styled.Text`
   font-size: 16px;
 `;
 
-export const WrapperIcon = styled.Pressable`
+export const Wrapper = styled.View`
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 50px;
-  height: 50px;
 `;
 
 export const ProductImage = styled.View`

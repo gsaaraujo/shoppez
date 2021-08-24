@@ -1,19 +1,21 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { ActivityIndicator, Animated } from 'react-native';
-
-import LottieView from 'lottie-react-native';
+import React, { useEffect, useState } from 'react';
+import { ActivityIndicator } from 'react-native';
 
 import storage from '@react-native-firebase/storage';
 import { FirebaseFirestoreTypes } from '@react-native-firebase/firestore';
 
-import { theme } from '../../global/theme/styles';
+import { ProductsType } from '../../screens/Home';
+
 import { Spacer } from '../Spacer';
+import { Favorite } from '../Favorite';
+
+import { theme } from '../../global/theme/styles';
 
 import {
   Container,
   Title,
   Span,
-  WrapperIcon,
+  Wrapper,
   ProductImage,
   Offer,
   Image,
@@ -21,10 +23,10 @@ import {
 
 type Props = {
   productInfo: FirebaseFirestoreTypes.DocumentData;
+  handleOnPress: (productDetails: ProductsType) => void;
 };
 
-export const Product = ({ productInfo }: Props) => {
-  const [hasFavorite, setHasFavorite] = useState(false);
+export const Product = ({ productInfo, handleOnPress }: Props) => {
   const [imageUri, setImageUri] = useState('');
 
   const { titleColor, primaryDark, primaryBlank } = theme.colors;
@@ -32,42 +34,19 @@ export const Product = ({ productInfo }: Props) => {
 
   useEffect(() => {
     const handleImage = async () => {
-      const reference = storage().ref(productInfo.types[0]);
-
-      try {
-        const uri = await reference.getDownloadURL();
-
-        setImageUri(uri);
-      } catch (error) {}
+      setImageUri(productInfo.types[0]);
     };
 
     handleImage();
   }, []);
 
-  const progress = useRef(new Animated.Value(0)).current;
-
-  const handleFavoriteAnimation = () => {
-    const newValue = hasFavorite ? 0 : 1;
-
-    Animated.timing(progress, {
-      toValue: newValue,
-      duration: 1000,
-      useNativeDriver: true,
-    }).start();
-
-    setHasFavorite(!hasFavorite);
-  };
-
   return (
-    <Container>
+    <Container onPress={() => handleOnPress(productInfo)}>
       <Spacer height={45} />
 
-      <WrapperIcon onPress={handleFavoriteAnimation}>
-        <LottieView
-          source={require('../../assets/animation/favorite.json')}
-          progress={progress}
-        />
-      </WrapperIcon>
+      <Wrapper>
+        <Favorite />
+      </Wrapper>
 
       {!!productInfo.offer && (
         <Offer>
@@ -79,7 +58,7 @@ export const Product = ({ productInfo }: Props) => {
 
       <ProductImage>
         {imageUri ? (
-          <Image source={{ uri: imageUri }} resizeMode='contain' />
+          <Image source={{ uri: productInfo.types[0] }} resizeMode='contain' />
         ) : (
           <ActivityIndicator color={primaryDark} size='large' />
         )}
