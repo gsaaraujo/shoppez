@@ -31,10 +31,11 @@ export const Span = styled.Text`
   font-size: 16px;
 `;
 
-export const Wrapper = styled.View`
+export const Wrapper = styled.Pressable`
   position: absolute;
   top: 0px;
   right: 0px;
+  z-index: 20;
 `;
 
 export const ProductImage = styled.View`

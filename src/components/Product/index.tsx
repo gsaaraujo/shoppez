@@ -6,6 +6,8 @@ import { FirebaseFirestoreTypes } from '@react-native-firebase/firestore';
 
 import { ProductsType } from '../../screens/Home';
 
+import { useUser } from '../../hooks/useUser';
+
 import { Spacer } from '../Spacer';
 import { Favorite } from '../Favorite';
 
@@ -31,6 +33,8 @@ export const Product = ({ productInfo, handleOnPress }: Props) => {
 
   const { titleColor, primaryDark, primaryBlank } = theme.colors;
   const { titleFont100, titleFont50 } = theme.fonts;
+
+  const { handleUpdateUser } = useUser();
 
   useEffect(() => {
     const handleImage = async () => {

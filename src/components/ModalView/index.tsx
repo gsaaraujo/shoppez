@@ -19,7 +19,11 @@ export const ModalView = ({
   const { overlay } = theme.colors;
 
   return (
-    <Container testID='ModalView' transparent visible={isVisible}>
+    <Container
+      testID='ModalView'
+      transparent
+      visible={isVisible}
+      animationType='slide'>
       <StatusBar backgroundColor={overlay} />
       <Overlay justifyContent={justifyContent}>{children}</Overlay>
     </Container>
