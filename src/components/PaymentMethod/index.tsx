@@ -12,8 +12,8 @@ export const PaymentMethod = () => {
 
   return (
     <Container>
-      {url.map(each => (
-        <Image source={each} />
+      {url.map((each, index) => (
+        <Image key={index} source={each} />
       ))}
     </Container>
   );

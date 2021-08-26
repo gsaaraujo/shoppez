@@ -1,13 +1,16 @@
 import React, { useState, useEffect, createContext, ReactNode } from 'react';
 
 import storage from '@react-native-firebase/storage';
+import firestore, {
+  FirebaseFirestoreTypes,
+} from '@react-native-firebase/firestore';
 
-import firestore from '@react-native-firebase/firestore';
 import { useAuth } from '../hooks/useAuth';
 import { firebase } from '@react-native-firebase/auth';
-import { ProductsType } from '../screens/Home';
+import { Alert } from 'react-native';
 
-type Product = {
+export type AppProductType = {
+  key: string;
   name: string;
   category: string;
   price: string;
@@ -18,16 +21,26 @@ type Product = {
   types: string[];
 };
 
-type User = {
+export type ShoppingCartType = AppProductType & {
+  quantity: number;
+};
+
+export type PurchaseHistoryType = AppProductType & {
+  quantity: number;
+};
+
+export type UserPreferences = {
   name: string;
   favorites: string[];
-  shopping_cart: ProductsType[];
-  purchase_history: ProductsType[];
+  shopping_cart: ShoppingCartType[];
+  purchase_history: PurchaseHistoryType[];
 };
 
 type ContextData = {
-  userData: User;
-  handleAddToShoppingCart: (newCart: ProductsType) => void;
+  userData: UserPreferences;
+  isLoading: boolean;
+  handleAddToShoppingCart: (newCart: ShoppingCartType) => void;
+  handleAddToPurchaseHistory: (newProducts: ShoppingCartType[]) => void;
 };
 
 type Props = {
@@ -37,7 +50,11 @@ type Props = {
 export const UserContext = createContext<ContextData>({} as ContextData);
 
 export const UserProvider = ({ children }: Props) => {
-  const [userData, setUserData] = useState<User>({} as User);
+  const [userData, setUserData] = useState<UserPreferences>(
+    {} as UserPreferences,
+  );
+  const [isLoading, setIsLoading] = useState(false);
+
   const { user } = useAuth();
 
   useEffect(() => {
@@ -58,62 +75,83 @@ export const UserProvider = ({ children }: Props) => {
             purchase_history: [],
           })
           .then(() => {
-            console.log('User added!');
+            handleUserData();
           });
       }
     };
     handleCreateUser();
   }, []);
 
-  const handleUserData = async () => {
-    const userDocument: ProductsType = await firestore()
-      .collection('Users')
-      .doc(user?.uid)
-      .get();
+  useEffect(() => {
+    handleUserData();
+  }, [isLoading]);
 
-    if (userDocument.exists) {
-      setUserData(userDocument.data());
+  const handleUserData = async () => {
+    try {
+      const userDocument = await firestore()
+        .collection('Users')
+        .doc(user?.uid)
+        .get();
+
+      if (userDocument.exists) {
+        setUserData(userDocument.data() as UserPreferences);
+      }
+    } catch (error) {
+      Alert.alert('Sorry for the inconvenience', 'Please try again later');
     }
   };
 
-  const handleAddToShoppingCart = async (newCart: ProductsType) => {
-    const userDocument: ProductsType = await firestore()
-      .collection('Users')
-      .doc(user?.uid)
-      .get();
+  const handleAddToShoppingCart = async (newCart: ShoppingCartType) => {
+    setIsLoading(true);
 
-    const shopping_cart = userDocument.data().shopping_cart;
-
-    await firestore()
-      .collection('Users')
-      .doc(user?.uid)
-      .update({
-        shopping_cart: [...shopping_cart, newCart],
-      });
+    try {
+      await firestore()
+        .collection('Users')
+        .doc(user?.uid)
+        .update({
+          shopping_cart: firebase.firestore.FieldValue.arrayUnion(newCart),
+        });
+    } catch (error) {
+      Alert.alert('Sorry for the inconvenience', 'Please try again later');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const handleRemoveAllFromShoppingCart = async () => {
-    await firestore().collection('Users').doc(user?.uid).delete();
-  };
+  const handleAddToPurchaseHistory = async (
+    newProducts: ShoppingCartType[],
+  ) => {
+    setIsLoading(true);
+    try {
+      const userDocument = await firestore()
+        .collection('Users')
+        .doc(user?.uid)
+        .get();
 
-  const handleAddToPurchaseHistory = async (newProducts: ProductsType[]) => {
-    const userDocument: ProductsType = await firestore()
-      .collection('Users')
-      .doc(user?.uid)
-      .get();
+      const purchase_history = userDocument.data()?.purchase_history;
 
-    const purchase_history = userDocument.data().purchase_history;
-
-    await firestore()
-      .collection('Users')
-      .doc(user?.uid)
-      .update({
-        purchase_history: [...purchase_history, ...newProducts],
-      });
+      await firestore()
+        .collection('Users')
+        .doc(user?.uid)
+        .update({
+          shopping_cart: [],
+          purchase_history: [...purchase_history, ...newProducts],
+        });
+    } catch (error) {
+      Alert.alert('Sorry for the inconvenience', 'Please try again later');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
-    <UserContext.Provider value={{ userData, handleAddToShoppingCart }}>
+    <UserContext.Provider
+      value={{
+        userData,
+        isLoading,
+        handleAddToShoppingCart,
+        handleAddToPurchaseHistory,
+      }}>
       {children}
     </UserContext.Provider>
   );

@@ -36,7 +36,7 @@ export const PaymentConfirm = ({ route }: any) => {
 
         <Spacer height={40} />
 
-        <Title>Adddress</Title>
+        <Title>Address</Title>
         <Spacer height={15} />
         <Subtitle>Hyule, Kakariko Village 64</Subtitle>
 
@@ -64,7 +64,7 @@ export const PaymentConfirm = ({ route }: any) => {
         <SuccessCenterCard title='PAYMENT SUCCESSFULY DONE !' />
       </ModalView>
 
-      <Spacer height={20} />
+      <Spacer height={60} />
     </Container>
   );
 };

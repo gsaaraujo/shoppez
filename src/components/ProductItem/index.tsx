@@ -1,5 +1,9 @@
 import React from 'react';
-import { AppProductType, ShoppingCartType } from '../../context/userProvider';
+import {
+  AppProductType,
+  ShoppingCartType,
+  PurchaseHistoryType,
+} from '../../context/userProvider';
 
 import { theme } from '../../global/theme/styles';
 import { Spacer } from '../Spacer';
@@ -17,7 +21,7 @@ import {
 } from './styles';
 
 type Props = {
-  itemInfo: ShoppingCartType;
+  itemInfo: ShoppingCartType | PurchaseHistoryType;
 };
 
 export const ProductItem = ({ itemInfo }: Props) => {

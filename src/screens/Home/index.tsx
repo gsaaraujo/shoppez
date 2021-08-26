@@ -6,8 +6,6 @@ import {
   ScrollView,
 } from 'react-native';
 
-import storage from '@react-native-firebase/storage';
-
 import firestore, {
   FirebaseFirestoreTypes,
 } from '@react-native-firebase/firestore';
@@ -16,7 +14,11 @@ import { theme } from '../../global/theme/styles';
 
 import SearchSvg from '../../assets/images/search.svg';
 
+import { useUser } from '../../hooks/useUser';
 import { useAuth } from '../../hooks/useAuth';
+import { useNavigation } from '@react-navigation/native';
+
+import { AppProductType } from '../../context/userProvider';
 
 import { Spacer } from '../../components/Spacer';
 import { LogOut } from '../../components/LogOut';
@@ -36,13 +38,11 @@ import {
   LoadingFlatlist,
 } from './styles';
 
-import { useNavigation } from '@react-navigation/native';
-
-export type ProductsType = FirebaseFirestoreTypes.DocumentData;
-
 export const Home = () => {
-  const [products, setProducts] = useState<ProductsType[]>([]);
-  const [productsFiltered, setProductsFiltered] = useState<ProductsType[]>([]);
+  const [products, setProducts] = useState<AppProductType[]>([]);
+  const [productsFiltered, setProductsFiltered] = useState<AppProductType[]>(
+    [],
+  );
   const [isLoading, setIsLoading] = useState(true);
   const [categorySelected, setCategorySelected] = useState('');
   const [productSearch, setProductSearch] = useState('');
@@ -96,7 +96,7 @@ export const Home = () => {
     const subscriber = firestore()
       .collection('Products')
       .onSnapshot(querySnapshot => {
-        const productsResult: ProductsType[] = [];
+        const productsResult: any[] = [];
 
         querySnapshot.forEach(documentSnapshot => {
           productsResult.push({
@@ -112,31 +112,6 @@ export const Home = () => {
       });
 
     return () => subscriber();
-  }, []);
-
-  useEffect(() => {
-    const handleUser = async () => {
-      const getUser = await firestore()
-        .collection('Users')
-        .doc(user?.uid)
-        .get();
-
-      if (!getUser.exists) {
-        firestore()
-          .collection('Users')
-          .doc(user?.uid)
-          .set({
-            name: user?.displayName,
-            favorites: [],
-            shopping_car: [],
-            purchase_history: [],
-          })
-          .then(() => {
-            // console.log('User added!');
-          });
-      }
-    };
-    handleUser();
   }, []);
 
   const handleLogOutModal = () => setModalVisibility(!modalVisibility);
@@ -180,7 +155,7 @@ export const Home = () => {
     setIsLoading(false);
   };
 
-  const handleGoToProductDetails = (productDetails: ProductsType) =>
+  const handleGoToProductDetails = (productDetails: AppProductType) =>
     navigation.navigate('ProductDetails', { productDetails: productDetails });
 
   return (

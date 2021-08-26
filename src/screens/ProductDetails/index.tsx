@@ -23,7 +23,6 @@ import {
   Title,
   Subtitle,
   Span,
-  CircleLayout,
   ProductImage,
   Image,
   TypesContent,
@@ -37,20 +36,33 @@ export const ProductDetails = ({ route }: any) => {
 
   const [typeSelected, setTypeSelected] = useState(productDetails.types[0]);
   const [sizeSelected, setSizeSelected] = useState(productDetails.sizes[0]);
-  const [quantitySelected, setQuantitySelected] = useState('1');
+  const [quantitySelected, setQuantitySelected] = useState(1);
 
   const { titleFont100, titleFont50, subtitleFont } = theme.fonts;
   const { titleColor, subtitleColor, primaryDark, primaryLight, available } =
     theme.colors;
 
-  const navigation = useNavigation();
-  const { handleAddToShoppingCart } = useUser();
+  const navigation: any = useNavigation();
+  const { isLoading, handleAddToShoppingCart } = useUser();
+
+  useEffect(() => {
+    productDetails.quantity = quantitySelected;
+  }, [quantitySelected]);
 
   const handleTypeSelected = (type: string) => setTypeSelected(type);
   const handleSizeSelected = (size: string) => setSizeSelected(size);
 
-  const handleQuantitySelected = (quantity: string) =>
+  const handleQuantitySelected = (quantity: number) =>
     setQuantitySelected(quantity);
+
+  const handleGoBack = () =>
+    navigation.navigate('BottomTab', { screen: 'ShoppingCart' });
+
+  const handleGoToPaymentConfirm = () =>
+    navigation.navigate('PaymentConfirm', {
+      quantity: quantitySelected,
+      price: productDetails.price * quantitySelected,
+    });
 
   return (
     <Container>
@@ -161,10 +173,18 @@ export const ProductDetails = ({ route }: any) => {
         <Button
           title='Add to cart'
           light
-          handleOnPress={() => handleAddToShoppingCart(productDetails)}
+          isLoading={isLoading}
+          handleOnPress={() => {
+            handleAddToShoppingCart(productDetails);
+            handleGoBack();
+          }}
         />
         <Spacer height={15} />
-        <Button title='Buy now' handleOnPress={() => {}} />
+        <Button
+          title='Buy now'
+          isLoading={isLoading}
+          handleOnPress={handleGoToPaymentConfirm}
+        />
 
         <Spacer height={40} />
       </Content>

@@ -6,15 +6,16 @@ import SadCartSvg from '../../assets/images/sad-cart.svg';
 import { theme } from '../../global/theme/styles';
 
 import { useUser } from '../../hooks/useUser';
+import { useNavigation } from '@react-navigation/native';
 import { UserPreferences } from '../../context/userProvider';
 
 import { Spacer } from '../../components/Spacer';
 import { Button } from '../../components/Button';
 import { ProductItem } from '../../components/ProductItem';
 import { SeparatorList } from '../../components/SeparatorList';
+import { TotalItemCount } from '../../components/TotalItemCount';
 
 import { Container, Title, CenterMessage } from './styles';
-import { TotalItemCount } from '../../components/TotalItemCount';
 
 export const ShoppingCart = () => {
   const [productPriceSum, setProductPriceSum] = useState(0);
@@ -24,6 +25,7 @@ export const ShoppingCart = () => {
   const { subtitleColor } = theme.colors;
 
   const { userData, isLoading } = useUser();
+  const navigation: any = useNavigation();
 
   useEffect(() => {
     handleProductPriceSum(userData);
@@ -53,6 +55,12 @@ export const ShoppingCart = () => {
       setProductQuantity(0);
     }
   };
+
+  const handleGoToPaymentConfirm = () =>
+    navigation.navigate('PaymentConfirm', {
+      price: productPriceSum,
+      quantity: productQuantity,
+    });
 
   return (
     <Container>
@@ -92,7 +100,7 @@ export const ShoppingCart = () => {
         <Button
           title='Buy now'
           isLoading={isLoading}
-          handleOnPress={() => {}}
+          handleOnPress={handleGoToPaymentConfirm}
         />
       )}
 

@@ -7,7 +7,7 @@ import { theme } from '../global/theme/styles';
 
 import { BottomTab } from './bottomTab.routes';
 import { ProductDetails } from '../screens/ProductDetails';
-import { ShoppingCart } from '../screens/ShoppingCart';
+import { PaymentConfirm } from '../screens/PaymentConfirm';
 
 export const AppRoute = () => {
   const { Navigator, Screen } = createNativeStackNavigator();
@@ -20,6 +20,7 @@ export const AppRoute = () => {
       <Navigator screenOptions={{ headerShown: false }}>
         <Screen name='BottomTab' component={BottomTab} />
         <Screen name='ProductDetails' component={ProductDetails} />
+        <Screen name='PaymentConfirm' component={PaymentConfirm} />
       </Navigator>
     </>
   );
