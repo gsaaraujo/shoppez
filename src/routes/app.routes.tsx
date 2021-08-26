@@ -6,6 +6,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { theme } from '../global/theme/styles';
 
 import { BottomTab } from './bottomTab.routes';
+import { ProductDetails } from '../screens/ProductDetails';
+import { ShoppingCart } from '../screens/ShoppingCart';
 
 export const AppRoute = () => {
   const { Navigator, Screen } = createNativeStackNavigator();
@@ -17,6 +19,7 @@ export const AppRoute = () => {
       <StatusBar barStyle='dark-content' backgroundColor={background} />
       <Navigator screenOptions={{ headerShown: false }}>
         <Screen name='BottomTab' component={BottomTab} />
+        <Screen name='ProductDetails' component={ProductDetails} />
       </Navigator>
     </>
   );

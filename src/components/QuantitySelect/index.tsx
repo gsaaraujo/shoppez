@@ -10,8 +10,8 @@ import { QuantityOptions } from '../QuantityOptions';
 import { Container, Title } from './styles';
 
 type Props = {
-  quantity: string;
-  handleOnPress: (quantity: string) => void;
+  quantity: number;
+  handleOnPress: (quantity: number) => void;
 };
 
 export const QuantitySelect = ({ quantity, handleOnPress }: Props) => {

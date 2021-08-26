@@ -10,7 +10,7 @@ import { Container, Wrapper, Title, QuantityContent } from './styles';
 
 type Props = {
   handleOnPressModal: () => void;
-  handleOnPressQuantity: (quantity: string) => void;
+  handleOnPressQuantity: (quantity: number) => void;
 };
 
 export const QuantityOptions = ({
@@ -20,7 +20,7 @@ export const QuantityOptions = ({
   const { titleFont100, titleFont50 } = theme.fonts;
   const { titleColor, subtitleColor, primaryDark, border } = theme.colors;
 
-  const quantities = ['1', '2', '3', '4', '5', '6'];
+  const quantities = [1, 2, 3, 4, 5, 6];
 
   return (
     <Container>
@@ -42,10 +42,11 @@ export const QuantityOptions = ({
       {quantities.map((quantity, index) => (
         <QuantityContent
           style={({ pressed }) => pressed && { opacity: 0.3 }}
+          key={index}
           onPress={() => {
             handleOnPressQuantity(quantity), handleOnPressModal();
           }}>
-          <Title key={index} font={titleFont50} color={subtitleColor} size={14}>
+          <Title font={titleFont50} color={subtitleColor} size={14}>
             {quantity} units
           </Title>
         </QuantityContent>
