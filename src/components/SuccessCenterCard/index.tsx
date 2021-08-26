@@ -5,14 +5,9 @@ import { Container, Content, Wrapper, Title } from './styles';
 
 type Props = {
   title: string;
-  handleOnPress: () => void;
 };
 
-export const SuccessCenterCard = ({ title, handleOnPress }: Props) => {
-  useEffect(() => {
-    handleOnPress();
-  }, []);
-
+export const SuccessCenterCard = ({ title }: Props) => {
   return (
     <Container>
       <Content>

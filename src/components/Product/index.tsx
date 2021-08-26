@@ -4,9 +4,8 @@ import { ActivityIndicator } from 'react-native';
 import storage from '@react-native-firebase/storage';
 import { FirebaseFirestoreTypes } from '@react-native-firebase/firestore';
 
-import { ProductsType } from '../../screens/Home';
-
 import { useUser } from '../../hooks/useUser';
+import { AppProductType } from '../../context/userProvider';
 
 import { Spacer } from '../Spacer';
 import { Favorite } from '../Favorite';
@@ -24,8 +23,8 @@ import {
 } from './styles';
 
 type Props = {
-  productInfo: FirebaseFirestoreTypes.DocumentData;
-  handleOnPress: (productDetails: ProductsType) => void;
+  productInfo: AppProductType;
+  handleOnPress: (productDetails: AppProductType) => void;
 };
 
 export const Product = ({ productInfo, handleOnPress }: Props) => {
@@ -33,8 +32,6 @@ export const Product = ({ productInfo, handleOnPress }: Props) => {
 
   const { titleColor, primaryDark, primaryBlank } = theme.colors;
   const { titleFont100, titleFont50 } = theme.fonts;
-
-  const { handleUpdateUser } = useUser();
 
   useEffect(() => {
     const handleImage = async () => {

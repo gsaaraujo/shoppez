@@ -8,7 +8,11 @@ import { Favorite } from '../Favorite';
 
 import { Container, Wrapper } from './styles';
 
-export const HeaderNavigation = () => {
+type Props = {
+  hasFavorite?: boolean;
+};
+
+export const HeaderNavigation = ({ hasFavorite = false }: Props) => {
   const { titleColor } = theme.colors;
   const navigation = useNavigation();
 
@@ -17,7 +21,7 @@ export const HeaderNavigation = () => {
       <Wrapper hitSlop={50} onPress={() => navigation.goBack()}>
         <ChevronLeftSvg color={titleColor} />
       </Wrapper>
-      <Favorite />
+      {hasFavorite && <Favorite />}
     </Container>
   );
 };
