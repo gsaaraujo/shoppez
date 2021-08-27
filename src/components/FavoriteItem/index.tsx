@@ -47,6 +47,8 @@ export const FavoriteItem = ({ itemInfo }: Props) => {
           {itemInfo.name.toUpperCase()}
         </Title>
 
+        <Spacer height={5} />
+
         <Title font={titleFont50} color={titleColor} size={16}>
           <Span color={primaryDark}>$</Span>
           {itemInfo.price}

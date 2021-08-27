@@ -50,7 +50,7 @@ export const ImageContent = styled.View`
 export const Span = styled.Text<SpanProps>`
   color: ${props => props.color};
   font-family: ${theme.fonts.titleFont100};
-  font-size: 20px;
+  font-size: 16px;
 `;
 
 export const Info = styled.View`

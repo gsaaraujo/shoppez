@@ -126,11 +126,10 @@ export const Home = () => {
 
   const handleSearchOnStopTyping = (productSearch: string) => {
     let productsCopy = products;
+    const regex = new RegExp(productSearch, 'i');
 
     if (productSearch) {
-      productsCopy = productsCopy.filter(
-        each => each.name === productSearch.toLowerCase(),
-      );
+      productsCopy = productsCopy.filter(each => each.name.match(regex));
 
       setProductsFiltered(productsCopy);
     } else {
