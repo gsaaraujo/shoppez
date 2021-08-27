@@ -46,7 +46,7 @@ export const Product = ({ productInfo, handleOnPress }: Props) => {
       <Spacer height={45} />
 
       <Wrapper>
-        <Favorite />
+        <Favorite productInfo={productInfo} />
       </Wrapper>
 
       {!!productInfo.offer && (

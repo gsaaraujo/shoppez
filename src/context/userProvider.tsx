@@ -31,7 +31,7 @@ export type PurchaseHistoryType = AppProductType & {
 
 export type UserPreferences = {
   name: string;
-  favorites: string[];
+  favorites: AppProductType[];
   shopping_cart: ShoppingCartType[];
   purchase_history: PurchaseHistoryType[];
 };
@@ -41,6 +41,7 @@ type ContextData = {
   isLoading: boolean;
   handleAddToShoppingCart: (newCart: ShoppingCartType) => void;
   handleAddToPurchaseHistory: (newProducts: ShoppingCartType[]) => void;
+  handleFavorite: (productInfo: AppProductType) => void;
 };
 
 type Props = {
@@ -144,6 +145,42 @@ export const UserProvider = ({ children }: Props) => {
     }
   };
 
+  const handleFavorite = async (productInfo: AppProductType) => {
+    try {
+      const userDocument = await firestore()
+        .collection('Users')
+        .doc(user?.uid)
+        .get();
+
+      let result = userDocument.data()?.favorites;
+
+      const alreadyExists = result.find(
+        (each: any) => each.key === productInfo.key,
+      );
+
+      if (alreadyExists) {
+        const remove = result.filter(
+          (each: any) => each.key !== productInfo.key,
+        );
+
+        await firestore().collection('Users').doc(user?.uid).update({
+          favorites: remove,
+        });
+      } else {
+        await firestore()
+          .collection('Users')
+          .doc(user?.uid)
+          .update({
+            favorites: [...result, productInfo],
+          });
+      }
+    } catch (error) {
+      Alert.alert('Sorry for the inconvenience', 'Please try again later');
+    }
+
+    handleUserData();
+  };
+
   return (
     <UserContext.Provider
       value={{
@@ -151,6 +188,7 @@ export const UserProvider = ({ children }: Props) => {
         isLoading,
         handleAddToShoppingCart,
         handleAddToPurchaseHistory,
+        handleFavorite,
       }}>
       {children}
     </UserContext.Provider>

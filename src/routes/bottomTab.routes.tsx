@@ -6,12 +6,14 @@ import { theme } from '../global/theme/styles';
 
 import HomeSvg from '../assets/images/home.svg';
 import BellSvg from '../assets/images/bell.svg';
+import HeartSvg from '../assets/images/heart.svg';
 import ShoppingBagSvg from '../assets/images/shopping-bag.svg';
 import ShoppingCartSvg from '../assets/images/shopping-cart.svg';
 
 import { TabBarIcon } from '../components/TabBarIcon';
 
 import { Home } from '../screens/Home';
+import { Favorites } from '../screens/Favorites';
 import { ShoppingCart } from '../screens/ShoppingCart';
 import { Notifications } from '../screens/Notifications';
 import { PurchaseHistory } from '../screens/PurchaseHistory';
@@ -45,6 +47,17 @@ export const BottomTab = () => {
           tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
             <TabBarIcon icon={ShoppingBagSvg} focused={focused} />
+          ),
+        }}
+      />
+      <Screen
+        name='Favorites'
+        component={Favorites}
+        options={{
+          headerTitle: 'Favorites',
+          tabBarShowLabel: false,
+          tabBarIcon: ({ focused }) => (
+            <TabBarIcon icon={HeartSvg} focused={focused} />
           ),
         }}
       />
