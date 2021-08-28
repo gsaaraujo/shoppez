@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ActivityIndicator, StatusBar } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
-import storage from '@react-native-firebase/storage';
 
 import { theme } from '../../global/theme/styles';
 
@@ -38,9 +36,8 @@ export const ProductDetails = ({ route }: any) => {
   const [sizeSelected, setSizeSelected] = useState(productDetails.sizes[0]);
   const [quantitySelected, setQuantitySelected] = useState(1);
 
-  const { titleFont100, titleFont50, subtitleFont } = theme.fonts;
-  const { titleColor, subtitleColor, primaryDark, primaryLight, available } =
-    theme.colors;
+  const { titleFont100, titleFont50 } = theme.fonts;
+  const { titleColor, primaryDark, available } = theme.colors;
 
   const navigation: any = useNavigation();
   const { isLoading, handleAddToShoppingCart } = useUser();

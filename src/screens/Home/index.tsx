@@ -6,15 +6,12 @@ import {
   ScrollView,
 } from 'react-native';
 
-import firestore, {
-  FirebaseFirestoreTypes,
-} from '@react-native-firebase/firestore';
+import firestore from '@react-native-firebase/firestore';
 
 import { theme } from '../../global/theme/styles';
 
 import SearchSvg from '../../assets/images/search.svg';
 
-import { useUser } from '../../hooks/useUser';
 import { useAuth } from '../../hooks/useAuth';
 import { useNavigation } from '@react-navigation/native';
 

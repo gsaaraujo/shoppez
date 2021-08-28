@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { useUser } from '../../hooks/useUser';
 import { useNavigation } from '@react-navigation/native';

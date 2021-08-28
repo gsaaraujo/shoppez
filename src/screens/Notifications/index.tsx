@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { theme } from '../../global/theme/styles';
-
 import RewardSvg from '../../assets/images/reward.svg';
 
 import { Spacer } from '../../components/Spacer';
@@ -16,9 +14,6 @@ import {
 } from './styles';
 
 export const Notifications = () => {
-  const {} = theme.fonts;
-  const {} = theme.colors;
-
   return (
     <Container>
       <Spacer height={40} />

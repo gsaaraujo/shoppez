@@ -26,7 +26,7 @@ export const PurchaseHistory = () => {
       {userData.purchase_history.length == 0 ? (
         <CenterMessage>
           <Title font={subtitleFont} color={subtitleColor} size={18}>
-            You haven't added to cart yet
+            You haven't purchased anything yet
           </Title>
 
           <Spacer height={25} />

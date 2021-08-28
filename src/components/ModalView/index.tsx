@@ -23,7 +23,7 @@ export const ModalView = ({
       testID='ModalView'
       transparent
       visible={isVisible}
-      animationType='slide'>
+      animationType='fade'>
       <StatusBar backgroundColor={overlay} />
       <Overlay justifyContent={justifyContent}>{children}</Overlay>
     </Container>
