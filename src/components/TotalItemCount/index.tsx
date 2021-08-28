@@ -21,7 +21,7 @@ export const TotalItemCount = ({ productQuantity, productPriceSum }: Props) => {
 
       <Title font={subtitleFont} color={subtitleColor} size={18}>
         <Span>$</Span>
-        {productPriceSum}
+        {productPriceSum.toFixed(2)}
       </Title>
     </Container>
   );

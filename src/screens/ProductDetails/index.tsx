@@ -183,7 +183,10 @@ export const ProductDetails = ({ route }: any) => {
         <Button
           title='Buy now'
           isLoading={isLoading}
-          handleOnPress={handleGoToPaymentConfirm}
+          handleOnPress={() => {
+            handleAddToShoppingCart(productDetails);
+            handleGoToPaymentConfirm();
+          }}
         />
 
         <Spacer height={40} />

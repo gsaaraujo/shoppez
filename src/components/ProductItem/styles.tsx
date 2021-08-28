@@ -11,6 +11,7 @@ export const Container = styled.View`
   width: 100%;
   flex-direction: row;
   align-items: center;
+  padding-right: 10px;
   justify-content: space-between;
   background-color: ${theme.colors.background};
 `;

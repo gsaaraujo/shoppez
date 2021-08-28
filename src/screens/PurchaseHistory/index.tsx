@@ -17,7 +17,7 @@ export const PurchaseHistory = () => {
   const { subtitleFont } = theme.fonts;
   const { subtitleColor } = theme.colors;
 
-  const { userData } = useUser();
+  const { userData, handleRemoveFromPurchaseHistory } = useUser();
 
   return (
     <Container>
@@ -36,8 +36,13 @@ export const PurchaseHistory = () => {
       ) : (
         <FlatList
           data={userData.purchase_history}
-          keyExtractor={(item, index) => (item.key = String(index))}
-          renderItem={({ item }) => <ProductItem itemInfo={item} />}
+          keyExtractor={item => item.key}
+          renderItem={({ item }) => (
+            <ProductItem
+              itemInfo={item}
+              onSwipe={handleRemoveFromPurchaseHistory}
+            />
+          )}
           ItemSeparatorComponent={() => <SeparatorList />}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ paddingBottom: 20 }}

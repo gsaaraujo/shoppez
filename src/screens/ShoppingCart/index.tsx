@@ -24,7 +24,7 @@ export const ShoppingCart = () => {
   const { subtitleFont } = theme.fonts;
   const { subtitleColor } = theme.colors;
 
-  const { userData, isLoading } = useUser();
+  const { userData, isLoading, handleRemoveFromShoppingCart } = useUser();
   const navigation: any = useNavigation();
 
   useEffect(() => {
@@ -80,7 +80,12 @@ export const ShoppingCart = () => {
         <FlatList
           data={userData.shopping_cart}
           keyExtractor={item => item.key}
-          renderItem={({ item }) => <ProductItem itemInfo={item} />}
+          renderItem={({ item }) => (
+            <ProductItem
+              itemInfo={item}
+              onSwipe={handleRemoveFromShoppingCart}
+            />
+          )}
           ItemSeparatorComponent={() => <SeparatorList />}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ paddingBottom: 20 }}

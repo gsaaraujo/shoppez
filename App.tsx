@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 import SplashScreen from 'react-native-splash-screen';
 
@@ -12,8 +13,10 @@ export const App = () => {
   }, []);
 
   return (
-    <AuthProvider>
-      <Routes />
-    </AuthProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </GestureHandlerRootView>
   );
 };
